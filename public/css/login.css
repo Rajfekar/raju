@@ -1,0 +1,200 @@
+.rbody{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: none;
+
+}
+
+
+.rbox{
+  margin-top: 4rem;
+  position: relative;
+  width:23em;
+  height: 30em;
+  border-radius: 8px;
+  overflow: hidden;
+  display: none;
+
+
+
+
+}
+
+.rbox::before{
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+
+  width:380px;
+  height: 420px;
+  background: linear-gradient(0deg,transparent,rgb(238, 21, 13),rgb(227, 227, 22));
+  transform-origin: bottom right;
+  animation: animate 6s linear infinite;
+  animation-delay: -3s;
+
+
+}
+
+.rbox::after{
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+
+  width:380px;
+  height: 420px;
+  background: linear-gradient(0deg,transparent,rgb(6, 198, 51),rgb(228, 20, 183));
+  transform-origin: bottom right;
+  animation: animate 6s linear infinite;
+
+
+  
+}
+
+@keyframes animate{
+  0%{
+    transform: rotate(0deg);
+  } 
+  100%{
+    transform: rotate(360deg);
+  }
+}
+
+.rform{
+    background:black;
+  position: absolute;
+  inset: 4px;
+  border-radius: 8px;
+  
+  z-index: 10;
+  padding: 50px 40px;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.rform h2{
+  color: #f4f7f7;
+  font-weight: 500;
+  text-align: center;
+  letter-spacing: 0.1em;
+
+}
+
+.rinputbox{
+  position: relative;
+  width: 300px;
+  margin-top: 35px;
+
+}
+
+.rinputbox input{
+  position: relative;
+  width: 100%;
+  padding: 20px 10px 10px;
+  background: black;
+  border: none;
+  outline: none;
+  color:rgb(7, 1, 1);
+  font-size: 1em;
+  letter-spacing: 0.05em;
+  z-index: 10;
+
+
+}
+
+.rinputbox span{
+  position: absolute;
+  left: 0;
+  padding: 20px 0px 10px;
+  font-size: 1em;
+  color: #f4f7f7;
+  pointer-events: none;
+  letter-spacing: 0.05em;
+  transition: 0.5s;
+
+
+}
+
+.rinputbox input:valid ~ span,
+.rinputbox input:focus ~ span{
+  color: orange;
+  transform: translateX(0px) translateY(-34px);
+  font-size: 0.75em;
+  
+
+}
+
+.rinputbox i {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: orange;
+  border-radius: 4px;
+  transition: 0.5s;
+  pointer-events: none;
+  z-index: 9;
+
+}
+
+
+.rinputbox input:valid ~ i,
+.rinputbox input:focus ~ i{
+  height: 44px;
+
+}
+
+.rlinks{
+  display: flex;
+  justify-content: space-between;
+}
+
+.rlinks a{
+  margin: 10px 0;
+  font-size: 0.75em;
+  color: #8f8f8f;
+  text-decoration: none;
+
+
+
+}
+
+.rlinks a:hover,
+.rlinks a:nth-child(2)
+
+{
+  color: #45f3ff;
+
+}
+
+.rform input[type="submit"]
+{
+  border: none;
+  outline: none;
+  background: #ffa545;
+  padding: 11px 25px;
+  width: 100px;
+  margin-top: 10px;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+
+
+}
+
+.rform input[type="submit"]:active{
+  opacity: 0.8;
+
+}
+
+
+.rform input[type="submit"]:hover{
+  background-color: rgb(77, 254, 77);
+  color: white;
+
+}

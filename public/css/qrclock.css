@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <!-- Bootstrap CSS v5.2.1 -->
+       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+       integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+   
+    <style>
+
+        *
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: consalas;
+
+}
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: black;
+
+}
+
+#reader {
+    width: 100%;
+    height: 100%;
+}
+#reader__scan_region
+{
+    width: 100%;
+    height: 100%;
+
+}
+#reader__scan_region video
+{
+    margin-top: 3em;
+    height: 65%;
+    width: 67%;
+    opacity: 1;
+
+}
+#reader__dashboard 
+{
+    margin-top: 5em;
+}
+#html5-qrcode-button-camera-start 
+{
+    padding: 10px;
+    border: 2px solid white;
+
+    background: green;
+    color: white;
+}
+#html5-qrcode-button-camera-stop
+{
+    padding: 10px;
+    border: 2px solid white;
+    background: red;
+    color: white;
+}
+
+.scan
+{
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    
+}
+.scan .qrcode
+{
+    position: relative;
+    width: 400px;
+    height: 400px;
+    background: url(QR_Code01.png);
+    background-sizing: 400px;
+
+
+}
+
+#reader__scan_region video
+{
+    animation: animate 4s ease-in-out infinite;
+}
+.scan .qrcode::before 
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: url('QR_Code02.png');
+    background-size: 400px;
+    animation: animate 4s ease-in-out infinite;
+
+}
+@keyframes animate {
+    0%,100%{
+        height: 0%;
+
+        
+    }
+    50%{
+            height: calc(100% - 20px);
+
+
+    }
+
+  
+}
+
+
+.scan .qrcode::after 
+    {
+        content: '';
+        position: absolute;
+        inset: 20px;
+        width: calc(100% - 40px);
+        height: 2px;
+        background: #35fd5c;
+        filter: drop-shadow(0 0 20px #35fd5c) drop-shadow(0 0 60px #35fd5c);
+        animation: animateline 4s ease-in-out infinite;
+
+        
+    }
+    @keyframes animateline
+    {
+        0% {
+            top: 20px;
+
+        }
+        50%
+        {
+            top: calc(100% - 20px);
+            top: calc(100% - 20px);
+        }
+    }
+
+    .border
+    {
+        position: absolute;
+        inset: 0;
+        background: url(border.png);
+        background-size: 400px;
+        margin-left: 3.9em;
+        background-repeat: no-repeat;
+        animation: animateText 0.5s linear infinite;
+        border: none;
+
+    }
+    .scan h3 
+    {
+        text-transform: uppercase;
+        font-size: 2em;
+        margin-top: 20px;
+        color: #fff;
+        filter: drop-shadow(0 0 20px #fff) drop-shadow(0 0 60px #fff);
+        letter-spacing: 2px;
+        animation: animateText 0.5s  steps(1) infinite;
+
+    }
+
+    @keyframes animateText
+    {
+        0% ,100%{
+            opacity: 0;
+
+        }
+        50% {
+            opacity: 1;
+
+        }
+    }
+
+
+/***** digital clock *****/
+#time
+{
+    margin-bottom: 40px;
+    display: flex;
+    padding: 10px 20px;
+    font-size: 2em;
+    font-weight: 600;
+    border: 2px solid rgba(0,0,0,0.5);
+    border-radius: 40px;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.5),
+    5px 5px 20px rgba(255,255,255,0.2),
+    -5px -5px 15px rgba(0,0,0,0.75);
+
+
+
+
+
+}
+#time div
+{
+    position: relative;
+    width: 60px;
+    text-align: center;
+    font-weight: 500;
+    color: var(--clr);
+    
+
+}
+
+#time div:nth-child(1)::after ,
+#time div:nth-child(2)::after 
+{
+    content: ':';
+    position: absolute;
+    right: -4px;
+
+
+}
+
+#time div:last-child
+{
+    font-size: 0.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #f4f7f7;
+
+}
+
+#time div:nth-child(2)::after 
+{
+    animation: animate 1s steps(1) infinite;
+}
+
+@keyframes animate
+{
+    0%{
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+
+    }
+}
+/***** End digital clock *****/
+
+    </style>
+    <script src="/js/html5-qrcode.min.js"></script>
+    <title>Scanning QR code </title>
+   
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <div class="scan">
+                    <div class="qrcode">
+                              <div id="reader"></div>
+                    </div>
+                    <h3>Scanning...</h3>
+                    <div class="border"></div>
+                 </div>
+               
+            <div class="col-md-3"></div>
+            
+        </div>
+    </div>
+   
+    </div>
+    
+ </div>
+       
+ 
+   
+<script>
+
+    function Play2() {
+        const beep = new Audio("audio/beep.mp3");
+
+        beep.play();
+    }
+    function Play() {
+        const fail = new Audio("audio/fail.mp3");
+        fail.play();
+    }
+
+    function rb() {
+        window.setTimeout(Play2(), 100);
+    }
+
+    function rb2() {
+        window.setTimeout(Play(), 100);
+    }
+    function rb3() {
+        window.setTimeout(Play3(), 100);
+    }
+
+    function autoRefreshPage() {
+        // window.location.href="http://khemrajfekar.in/rit+raipur+qr+code+login+by+khemraj+fekar+7697477107+cse+301202219077+cs1945";
+        window.location.href = "http://127.0.0.1:8000/rit+raipur+qr+code+login+by+khemraj+fekar+7697477107+cse+301202219077+cs1945";
+    }
+    // setInterval("autoRefreshPage()", 1000 * 600);
+
+    let scanner = new Html5QrcodeScanner("reader", {
+        // Scanner will be initialized in DOM inside element with id of 'reader'
+        qrbox: {
+            width: 350,
+            height: 350,
+        }, // Sets dimensions of scanning box (set relative to reader element width)
+        fps: 120, // Frames per second to attempt a scan
+    });
+
+    scanner.render(success, error);
+    // Starts scanner
+
+    function success(result) {
+        const n = result.length;
+        if (n < 12) {
+            rb();
+            window.setTimeout(function () {
+                //  window.location.href="http://khemrajfekar.in/rit/quick/" + result;
+                window.location.href ="http://127.0.0.1:8000/rit/quick/" + result;
+            }, 1700);
+
+            scanner.clear();
+            // Clears scanning instance
+
+            document.getElementById("reader").remove();
+            // Removes reader element from DOM since no longer needed
+        }
+    }
+    function error(err) {
+        // console.error(err);
+        // Prints any errors to the console
+    }
+
+    
+</script>
+ <script>
+
+//    let hr = document.querySelector('#hr');
+//    let mn = document.querySelector('#mn');
+//    let sc = document.querySelector('#sc');
+   setInterval(()=>{
+  
+
+
+   //    digital clock 
+   let hours = document.getElementById('hour');
+   let minutes = document.getElementById('minutes');
+   let seconds = document.getElementById('seconds');
+   let ampm = document.getElementById('ampm');
+   let h = new Date().getHours();
+   let m = new Date().getMinutes();
+   let s = new Date().getSeconds();
+   let date = new Date().getDate();
+   let month = new Date().getMonth();
+   let year = new Date().getFullYear();
+   let am = h >= 12 ? "PM" : "AM";
+   // convert 24 hour to 12 hour clock
+   if(h>12)
+   {
+    h  = h-12;
+   }
+   
+   //add zero before single digit number
+   h = (h<10) ? "0"+h : h;
+   m = (m<10) ? "0"+m : m;
+   s = (s<10) ? "0"+s : s;
+
+   hours.innerHTML = h;
+   minutes.innerHTML = m;
+   seconds.innerHTML = s;
+   ampm.innerHTML = am;
+   });
+   
+    </script>
+   
+  
+</body>
+</html>
