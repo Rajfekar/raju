@@ -162,28 +162,39 @@
            <div class="progress">
               <span class="skill">C++ <i class="val">90%</i></span>
               <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
               </div>
             </div>
 
 
-               <div class="progress">
-              <span class="skill">JAVA <i class="val">60%</i></span>
+           <div class="progress">
+              <span class="skill">Python <i class="val">90%</i></span>
               <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
               </div>
             </div>
+             
 
-
-               <div class="progress">
-              <span class="skill">HTML <i class="val">100%</i></span>
+           <div class="progress">
+              <span class="skill">PHP <i class="val">90%</i></span>
               <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
               </div>
             </div>
+
+        
 
 
             
+
+            
+
+             <div class="progress">
+              <span class="skill">HTML <i class="val">90%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
 
             <div class="progress">
               <span class="skill">CSS <i class="val">90%</i></span>
@@ -192,54 +203,41 @@
               </div>
             </div>
 
-            <div class="progress">
-              <span class="skill">JavaScript <i class="val">75%</i></span>
+               <div class="progress">
+              <span class="skill">SASS <i class="val">85%</i></span>
               <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
               </div>
             </div>
+
+
+               <div class="progress">
+              <span class="skill">JavaScript <i class="val">95%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill">TypeScript <i class="val">90%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+             <div class="progress">
+              <span class="skill">VISUAL BASIC <i class="val">70%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
 
           </div>
 
           <div class="col-lg-6">
 
-            <div class="progress">
-              <span class="skill">PHP <i class="val">80%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-            <div class="progress">
-              <span class="skill">Laravel <i class="val">90%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-               <div class="progress">
-              <span class="skill">Livewire <i class="val">90%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-               <div class="progress">
-              <span class="skill">Alpine-JS <i class="val">90%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-              
-
-            <div class="progress">
-              <span class="skill">TypeScript <i class="val">55%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-             <div class="progress">
+              <div class="progress">
               <span class="skill">React-JS <i class="val">90%</i></span>
               <div class="progress-bar-wrap">
                 <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
@@ -260,17 +258,79 @@
               </div>
             </div>
 
-              <div class="progress">
-              <span class="skill">Python <i class="val">90%</i></span>
+               <div class="progress">
+              <span class="skill">Express-JS <i class="val">90%</i></span>
               <div class="progress-bar-wrap">
                 <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
               </div>
             </div>
 
-              <div class="progress">
-              <span class="skill">Django<i class="val">90%</i></span>
+
+
+               <div class="progress">
+              <span class="skill">JQUERY <i class="val">90%</i></span>
               <div class="progress-bar-wrap">
                 <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill">Bootstrap <i class="val">80%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill">Laravel <i class="val">90%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+               <div class="progress">
+              <span class="skill">Livewire <i class="val">80%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+               <div class="progress">
+              <span class="skill">Alpine-JS <i class="val">90%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+              
+
+          
+
+           
+              <div class="progress">
+              <span class="skill">Tailwind <i class="val">80%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+              <div class="progress">
+              <span class="skill">Django <i class="val">60%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+             <div class="progress">
+              <span class="skill">RDBMS- MySQL <i class="val">90%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+             <div class="progress">
+              <span class="skill">FireBase/Appwrite <i class="val">80%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
               </div>
             </div>
 
@@ -287,86 +347,118 @@
 
         <div class="section-title">
           <h2>Resume</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
         </div>
 
         <div class="row">
           <div class="col-lg-6">
             <h3 class="resume-title">Sumary</h3>
             <div class="resume-item pb-0">
-              <h4>Alice Barkley</h4>
-              <p><em>Innovative and deadline-driven Graphic Designer with 3+ years of experience designing and developing user-centered digital/print marketing material from initial concept to final, polished deliverable.</em></p>
+              <h4>Khemraj Fekar</h4>
+              <p><em>my strongest point is that i can learn from my atmoshphere. my aim is to make world open and connected. </em></p>
               <p>
               <ul>
-                <li>Portland par 127,Orlando, FL</li>
-                <li>(123) 456-7891</li>
-                <li>alice.barkley@example.com</li>
+                <li>Raipur , CG, INDIA</li>
+                <li>+91-7697477107</li>
+                <li>rajfekar.123@gmail.com</li>
               </ul>
               </p>
             </div>
 
             <h3 class="resume-title">Education</h3>
             <div class="resume-item">
-              <h4>Master of Fine Arts &amp; Graphic Design</h4>
-              <h5>2015 - 2016</h5>
-              <p><em>Rochester Institute of Technology, Rochester, NY</em></p>
-              <p>Qui deserunt veniam. Et sed aliquam labore tempore sed quisquam iusto autem sit. Ea vero voluptatum qui ut dignissimos deleniti nerada porti sand markend</p>
+              <h4>10th  </h4>
+              <h5>2016 - 2017</h5>
+              <p><em>Ganpat Sindhi Higher Secondary School, Purani basti Raipur</em></p>
+              <p>CHHATTISGARH BOARD OF SECONDARY EDUCATION , RAIPUR</p>
+              <p>85.86%</p>
             </div>
             <div class="resume-item">
-              <h4>Bachelor of Fine Arts &amp; Graphic Design</h4>
-              <h5>2010 - 2014</h5>
-              <p><em>Rochester Institute of Technology, Rochester, NY</em></p>
-              <p>Quia nobis sequi est occaecati aut. Repudiandae et iusto quae reiciendis et quis Eius vel ratione eius unde vitae rerum voluptates asperiores voluptatem Earum molestiae consequatur neque etlon sader mart dila</p>
+              <h4>12th &amp; Maths </h4>
+              <h5>2018 - 2019</h5>
+              <p><em>Ganpat Sindhi Higher Secondary School, Purani basti Raipur</em></p>
+              <p>CHHATTISGARH BOARD OF SECONDARY EDUCATION , RAIPUR</p>
+              <p>80.80% </p>
+            </div>
+
+             <div class="resume-item">
+              <h4>B.Tech &amp; CSE  </h4>
+              <h5>2019-20 to 2022-2023</h5>
+              <p><em>Raipur Institute Of Technology, Raipur</em></p>
+              <p>CHHATTISGARH SWAMI VIVEKANAND TECHNICAL UNIVERSITY, BHILAI</p>
+              <p>8.4 CGPA  (84%)</p>
             </div>
           </div>
           <div class="col-lg-6">
-            <h3 class="resume-title">Professional Experience</h3>
+
+            <h3 class="resume-title">Professional Training</h3>
             <div class="resume-item">
-              <h4>Senior graphic design specialist</h4>
-              <h5>2019 - Present</h5>
-              <p><em>Experion, New York, NY </em></p>
+              <h4> Web Development</h4>
+              <h5>2022</h5>
+              <p><em>CHHATTISGARH SWAMI VIVEKANAND TECHNICAL UNIVERSITY, BHILAI </em></p>
               <p>
               <ul>
-                <li>Lead in the design, development, and implementation of the graphic, layout, and production communication materials</li>
-                <li>Delegate tasks to the 7 members of the design team and provide counsel on all aspects of the project. </li>
-                <li>Supervise the assessment of all graphic materials in order to ensure quality and accuracy of the design</li>
-                <li>Oversee the efficient use of production project budgets ranging from $2,000 - $25,000</li>
+                <li>Learned UI/UX Design using HTML, CSS, JavaScript.</li>
+              
               </ul>
               </p>
             </div>
             <div class="resume-item">
-              <h4>Graphic design specialist</h4>
-              <h5>2017 - 2018</h5>
-              <p><em>Stepping Stone Advertising, New York, NY</em></p>
-              <p>
-              <ul>
-                <li>Developed numerous marketing programs (logos, brochures,infographics, presentations, and advertisements).</li>
-                <li>Managed up to 5 projects or tasks at a given time while under pressure</li>
-                <li>Recommended and consulted with clients on the most appropriate graphic design</li>
-                <li>Created 4+ design presentations and proposals a month for clients and account managers</li>
-              </ul>
-              </p>
+              <h4>Android App Development</h4>
+              <h5>2022</h5>
+              <p><em>SIMPLILEARN</em></p>
+            
             </div>
+
+             <div class="resume-item">
+              <h4>Microprocessor-8086</h4>
+              <h5>2022</h5>
+              <p><em>Bharat Acharya Education</em></p>
+            
+            </div>
+
+
+              <div class="resume-item">
+              <h4>Ethical Hacking</h4>
+              <h5>2021-22</h5>
+              <p><em>SIMPLILEARN</em></p>
+            
+            </div>
+
+             <h3 class="resume-title">Professional Experience</h3>
+            <div class="resume-item pb-0">
+              <h4>Laravel Framework</h4>
+               <h5>2022-23</h5>
+               <p><em>ARDP TECHNOLOGY , HYDRABAD</em></p>
+              <ul>
+                <li>working as a back-end intern.</li>
+              </ul>
+             
+            </div>
+
+
           </div>
+
+         
+          
         </div>
 
       </div>
     </section><!-- End Resume Section -->
 
-    <!-- ======= Services Section ======= -->
-    <section id="services" class="services section-bg">
+    <!-- ======= Hobbies Section ======= -->
+    <section id="hobbies" class="services section-bg">
       <div class="container">
 
         <div class="section-title">
-          <h2>Services</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+          <h2>Hobbies</h2>
+         
         </div>
 
         <div class="row">
           <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
             <div class="icon-box">
               <div class="icon"><i class="bx bxl-dribbble"></i></div>
-              <h4 class="title"><a href="">Lorem Ipsum</a></h4>
+              <h4 class="title"><a href="">Coding</a></h4>
               <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
             </div>
           </div>
@@ -374,7 +466,7 @@
           <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
             <div class="icon-box">
               <div class="icon"><i class="bx bx-file"></i></div>
-              <h4 class="title"><a href="">Sed ut perspiciatis</a></h4>
+              <h4 class="title"><a href="">Playing Chess</a></h4>
               <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
             </div>
           </div>
@@ -382,7 +474,7 @@
           <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
             <div class="icon-box">
               <div class="icon"><i class="bx bx-tachometer"></i></div>
-              <h4 class="title"><a href="">Magni Dolores</a></h4>
+              <h4 class="title"><a href="">Swiming</a></h4>
               <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
             </div>
           </div>
@@ -390,7 +482,7 @@
           <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
             <div class="icon-box">
               <div class="icon"><i class="bx bx-world"></i></div>
-              <h4 class="title"><a href="">Nemo Enim</a></h4>
+              <h4 class="title"><a href="">YouTube</a></h4>
               <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
             </div>
           </div>
