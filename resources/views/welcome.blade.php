@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="/css/fontawesome.min.css">
     <link rel="stylesheet" href="/css/css2.css">
     <link rel="stylesheet" href="/css/custom.css">
-    @livewireStyles
+
 </head>
 
 <body class="bg-gray-200">
@@ -42,7 +42,7 @@
                         <div class="flex justify-between w-full items-center space-x-4 lg:my-8 my-5">
                             <!-- website logo -->
                             <a class="text-5xl font-semibold" href="/">
-                                <h1 id="rajfekar" style="color:aqua;">RAJ FEKAR</h1>
+                                <h1 id="rajfekar">RAJ FEKAR</h1>
                             </a>
                             <div class="flex items-center">
                                 <!-- light and dark mode button -->
@@ -64,37 +64,43 @@
                     <nav id="menubar" class="sm:hidden lg:block">
                         <ul class="flex my-12">
                             <li>
-                                <a class="menu-item-two-active" href="./homePage.html">
+                                <a class="menu-item-two-active" href="{{url('/')}}">
                                     <span class="mr-2 text-base">
                                         <i class="fa-solid fa-house"></i>
                                     </span> Home </a>
                             </li>
                             <li>
-                                <a class="menu-item-two" href="./aboutTwo.html">
+                                <a class="menu-item-two" href="{{url('/rit/login/')}}">
+                                    <span class="mr-2 text-base">
+                                        <i class="fa-solid fa-house"></i>
+                                    </span> RIT </a>
+                            </li>
+                            <li>
+                                <a href="#about_section" class="menu-item-two">
                                     <span class="mr-2 text-base">
                                         <i class="fa-regular fa-user"></i>
                                     </span> About </a>
                             </li>
                             <li>
-                                <a class="menu-item-two" href="./resumeTwo.html">
+                                <a class="menu-item-two" href="#resume_section">
                                     <span class="mr-2 text-base">
                                         <i class="fa-regular fa-file-lines"></i>
                                     </span> Resume </a>
                             </li>
                             <li>
-                                <a class="menu-item-two" href="./portfiloTwo.html">
+                                <a class="menu-item-two">
                                     <span class="mr-2 text-base">
                                         <i class="fas fa-briefcase"></i>
                                     </span> Works </a>
                             </li>
                             <li>
-                                <a class="menu-item-two" href="./blogTwo.html">
+                                <a class="menu-item-two">
                                     <span class="mr-2 text-base">
                                         <i class="fa-brands fa-blogger"></i>
                                     </span> Blogs </a>
                             </li>
                             <li>
-                                <a class="menu-item-two" href="./contactTwo.html">
+                                <a class="menu-item-two" href="#contact_section">
                                     <span class="mr-2 text-base">
                                         <i class="fa-solid fa-address-book"></i>
                                     </span> Contact </a>
@@ -114,37 +120,43 @@
                         <ul
                             class="block rounded-b-[20px] shadow-md absolute left-0 top-20 z-[22222222222222] w-full bg-white dark:bg-[#1d1d1d]">
                             <li>
-                                <a class="mobile-menu-items-active" href="./homePage.html">
+                                <a class="mobile-menu-items-active">
                                     <span class="mr-2 text-xl">
                                         <i class="fa-solid fa-house"></i>
                                     </span> Home </a>
                             </li>
                             <li>
-                                <a class="mobile-menu-items" href="./aboutTwo.html">
+                                <a class="mobile-menu-items" href="{{url('/rit/login')}}">
                                     <span class="mr-2 text-xl">
+                                        <i class="fa-solid fa-house"></i>
+                                    </span> RIT </a>
+                            </li>
+                            <li>
+                                <a href="#about_section" class="mobile-menu-items">
+                                    <span class=" mr-2 text-xl">
                                         <i class="fa-regular fa-user"></i>
                                     </span> About </a>
                             </li>
                             <li>
-                                <a class="mobile-menu-items" href="./resumeTwo.html">
+                                <a class="mobile-menu-items" href="#resume_section">
                                     <span class="mr-2 text-xl">
                                         <i class="fa-regular fa-file-lines"></i>
                                     </span> Resume </a>
                             </li>
                             <li>
-                                <a class="mobile-menu-items" href="./portfiloTwo.html">
+                                <a class="mobile-menu-items">
                                     <span class="mr-2 text-xl">
                                         <i class="fas fa-briefcase"></i>
                                     </span> Works </a>
                             </li>
                             <li>
-                                <a class="mobile-menu-items" href="./blogTwo.html">
+                                <a class="mobile-menu-items">
                                     <span class="mr-2 text-xl">
                                         <i class="fa-brands fa-blogger"></i>
                                     </span> Blogs </a>
                             </li>
                             <li>
-                                <a class="mobile-menu-items" href="./contactTwo.html">
+                                <a class="mobile-menu-items" href="#contact_section">
                                     <span class="mr-2 text-xl">
                                         <i class="fa-solid fa-address-book"></i>
                                     </span> Contact </a>
@@ -192,8 +204,8 @@
                         </a>
                     </div>
                     <!-- dowanload button -->
-                    <button class="dowanload-btn">
-                        <img src="./images/img/dowanload.png" alt="icon" class="mr-2" />Download CV </button>
+                    <a class="dowanload-btn" href="{{url('/images/img/RajResume.pdf')}}">
+                        <img src="./images/img/dowanload.png" alt="icon" class="mr-2" />Download CV </a>
                 </div>
                 <!-- Home page contant End -->
             </div>
@@ -206,16 +218,16 @@
     <div>
         <div class="container lg:rounded-2xl bg-white dark:bg-[#111111] px-4 sm:px-5 md:px-10 lg:px-20">
             <div data-aos="fade" class="aos-init aos-animate">
-                <div class="py-12">
+                <div id="about_section" class="py-12">
                     <!-- about page title -->
                     <h2 class="after-effect after:left-52 mt-12 lg:mt-0"> About Me </h2>
                     <div class="grid grid-cols-12 md:gap-10 pt-4 md:pt-[40px] items-center">
-                        <div class="col-span-12 md:col-span-4">
+                        <div class="col-span-12 md:col-span-12">
                             <!-- about me image -->
-                            <img class="w-full md:w-[330px] md:h-[400px] object-cover overflow-hidden rounded-[35px] mb-3 md:mb-0"
-                                src="{{url('/images/img/about.jpg')}}" alt="about image" />
+                            <img class="w-full  object-cover overflow-hidden rounded-[35px] mb-3 md:mb-0"
+                                src="{{url('/images/img/qrcoderit.jpg')}}" alt="about image" />
                         </div>
-                        <div class="col-span-12 md:col-span-8 space-y-2.5">
+                        <div class="col-span-12 md:col-span-12 space-y-2.5">
                             <!-- who am i content  -->
                             <div class="md:mr-12 xl:mr-16">
                                 <h3 class="text-4xl font-medium dark:text-white mb-2.5"> Who am I? </h3>
@@ -239,7 +251,8 @@
                                         <div class="space-y-1">
                                             <p class="text-xs text-gray-lite dark:text-color-910"> Phone
                                             </p>
-                                            <h6 class="font-medium dark:text-white"> +91 7697477107 </h6>
+                                            <h6 class="font-medium dark:text-white"> <a href=”tel:7697477107“> +91
+                                                    7697477107 </a></h6>
                                         </div>
                                     </div>
 
@@ -263,7 +276,8 @@
                                         <div class="space-y-1">
                                             <p class="text-xs text-gray-lite dark:text-color-910"> Email
                                             </p>
-                                            <h6 class="font-medium dark:text-white"> rajfekar.123@gmail.com </h6>
+                                            <h6 class="font-medium dark:text-white"> <a
+                                                    href="mailto:rajfekar.123@gmail.com">rajfekar.123@gmail.com</a></h6>
                                         </div>
                                     </div>
 
@@ -353,36 +367,6 @@
                 </div>
 
                 <!-- what i do contain end -->
-                <div>
-                    <div class="bg-[#F8FBFB] dark:bg-[#0D0D0D] max-w-full h-auto py-10 rounded-xl">
-                        <h3 class="text-center dark:text-white text-6xl mb-3 font-semibold">Clients</h3>
-                        <!-- slider and slider items start -->
-                        <div class="slickTwo px-2 pt-8">
-                            <div>
-                                <img class="overflow-hidden brand-img" src="./images/slider/brand.png" alt="brand" />
-                            </div>
-                            <div>
-                                <img class="overflow-hidden brand-img" src="./images/slider/brand1.png" alt="brand" />
-                            </div>
-                            <div>
-                                <img class="overflow-hidden brand-img" src="./images/slider/brand2.png" alt="brand" />
-                            </div>
-                            <div>
-                                <img class="overflow-hidden brand-img" src="./images/slider/brand3.png" alt="brand" />
-                            </div>
-                            <div>
-                                <img class="overflow-hidden brand-img" src="./images/slider/brand4.png" alt="brand" />
-                            </div>
-                            <div>
-                                <img class="overflow-hidden brand-img" src="./images/slider/brand1.png" alt="brand" />
-                            </div>
-                            <div>
-                                <img class="overflow-hidden brand-img" src="./images/slider/brand1.png" alt="brand" />
-                            </div>
-                        </div>
-                        <!-- slider and slider items end -->
-                    </div>
-                </div>
 
 
             </div>
@@ -396,7 +380,7 @@
     <section class="bg-white lg:rounded-2xl dark:bg-[#111111]">
         <div data-aos="fade" class="aos-init aos-animate">
             <div class="container sm:px-5 md:px-10 lg:px-20">
-                <div class="py-12 px-4">
+                <div id="resume_section" class="py-12 px-4">
                     <h2 class="after-effect after:left-44 mb-[40px] mt-12 lg:mt-0"> Resume </h2>
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-6">
                         <!-- eductation contain -->
@@ -408,24 +392,25 @@
 
                             <div
                                 class="py-4 dark:bg-transparent bg-[#fff4f4] pl-5 pr-3 space-y-2 mb-6 rounded-lg dark:border-[#212425] dark:border-2">
-                                <span class="text-tiny text-gray-lite dark:text-[#b7b7b7]">2021-2023</span>
-                                <h3 class="text-xl dark:text-white"> Ph.D in Horriblensess </h3>
-                                <p class="dark:text-[#b7b7b7]"> ABC University, Los Angeles, CA </p>
+                                <span class="text-tiny text-gray-lite dark:text-[#b7b7b7]">2016-2017</span>
+                                <h3 class="text-xl dark:text-white"> 10th | CGBSE | 85.83% </h3>
+                                <p class="dark:text-[#b7b7b7]"> Ganpat Sindhi Higher Secondary School, Purani basti
+                                    Raipur </p>
                             </div>
 
                             <div
                                 class="py-4 dark:bg-transparent bg-[#fff1fb] pl-5 pr-3 space-y-2 rounded-lg mb-6 dark:border-[#212425] dark:border-2">
-                                <span class="text-tiny text-gray-lite dark:text-[#b7b7b7]">2019 -
-                                    Present</span>
-                                <h3 class="text-xl dark:text-white"> Sr. Software Tester </h3>
-                                <p class="dark:text-[#b7b7b7]">Google Inc.</p>
+                                <span class="text-tiny text-gray-lite dark:text-[#b7b7b7]">2018 - 2019</span>
+                                <h3 class="text-xl dark:text-white"> 12th | CGBSE | 80.80% </h3>
+                                <p class="dark:text-[#b7b7b7]"> Ganpat Sindhi Higher Secondary School, Purani basti
+                                    Raipur </p>
                             </div>
 
                             <div
                                 class="py-4 dark:bg-transparent bg-[#fff4f4] pl-5 pr-3 space-y-2 rounded-lg dark:border-[#212425] dark:border-2">
-                                <span class="text-tiny text-gray-lite dark:text-[#b7b7b7]">2021</span>
-                                <h3 class="text-xl dark:text-white">Best Developer</h3>
-                                <p class="dark:text-[#b7b7b7]"> University Of Melbourne, NA </p>
+                                <span class="text-tiny text-gray-lite dark:text-[#b7b7b7]">2019-2023</span>
+                                <h3 class="text-xl dark:text-white">B.Tech | CSE | 8.3 CGPA</h3>
+                                <p class="dark:text-[#b7b7b7]"> Raipur Institute Of Technology,Raipur C.G. </p>
                             </div>
 
                         </div>
@@ -439,23 +424,24 @@
 
                             <div
                                 class="py-4 dark:bg-transparent bg-[#eef5fa] pl-5 pr-3 space-y-2 mb-6 rounded-lg dark:border-[#212425] dark:border-2">
-                                <span class="text-tiny text-gray-lite dark:text-[#b7b7b7]">2017-2021</span>
-                                <h3 class="text-xl dark:text-white"> Computer Science </h3>
-                                <p class="dark:text-[#b7b7b7]"> Imperialize Technical Institute </p>
+                                <span class="text-tiny text-gray-lite dark:text-[#b7b7b7]">2022-23</span>
+                                <h3 class="text-xl dark:text-white"> Laravel </h3>
+                                <p class="dark:text-[#b7b7b7]"> work as a back-end intern in ARTP technology hydrabad.
+                                </p>
                             </div>
 
                             <div
                                 class="py-4 dark:bg-transparent bg-[#f2f4ff] pl-5 pr-3 space-y-2 rounded-lg mb-6 dark:border-[#212425] dark:border-2">
-                                <span class="text-tiny text-gray-lite dark:text-[#b7b7b7]">2015-2017</span>
+                                {{-- <span class="text-tiny text-gray-lite dark:text-[#b7b7b7]">2015-2017</span>
                                 <h3 class="text-xl dark:text-white"> Cr. Web Developer </h3>
-                                <p class="dark:text-[#b7b7b7]">ib-themes ltd.</p>
+                                <p class="dark:text-[#b7b7b7]">ib-themes ltd.</p> --}}
                             </div>
 
                             <div
                                 class="py-4 dark:bg-transparent bg-[#eef5fa] pl-5 pr-3 space-y-2 rounded-lg dark:border-[#212425] dark:border-2">
-                                <span class="text-tiny text-gray-lite dark:text-[#b7b7b7]">2008</span>
+                                {{-- <span class="text-tiny text-gray-lite dark:text-[#b7b7b7]">2008</span>
                                 <h3 class="text-xl dark:text-white">Best Writter</h3>
-                                <p class="dark:text-[#b7b7b7]"> Online Typodev Soluation Ltd. </p>
+                                <p class="dark:text-[#b7b7b7]"> Online Typodev Soluation Ltd. </p> --}}
                             </div>
                         </div>
 
@@ -468,25 +454,25 @@
 
                             <div
                                 class="py-4 dark:bg-transparent bg-[#fcf4ff]  pl-5 pr-3 space-y-2 mb-6  rounded-lg dark:border-[#212425] dark:border-2">
-                                <span class="text-tiny text-gray-lite dark:text-[#b7b7b7]">2015-2017</span>
-                                <h3 class="text-xl dark:text-white"> Graphic Designer </h3>
-                                <p class="dark:text-[#b7b7b7]"> Web Graphy, Los Angeles, CA </p>
+                                <span class="text-tiny text-gray-lite dark:text-[#b7b7b7]">2021-2022</span>
+                                <h3 class="text-xl dark:text-white"> Chess </h3>
+                                <p class="dark:text-[#b7b7b7]"> i awarded for getting first position in chess game.</p>
                             </div>
 
                             <div
                                 class="py-4 dark:bg-transparent bg-[#fcf9f2] pl-5 pr-3 space-y-2 rounded-lg mb-6 dark:border-[#212425] dark:border-2">
-                                <span class="text-tiny text-gray-lite dark:text-[#b7b7b7]">2014 -
-                                    2015</span>
-                                <h3 class="text-xl dark:text-white"> Jr. Web Developer </h3>
-                                <p class="dark:text-[#b7b7b7]">Creative Gigs.</p>
+                                <span class="text-tiny text-gray-lite dark:text-[#b7b7b7]">2022-23</span>
+                                <h3 class="text-xl dark:text-white"> QRcode based Attendance system</h3>
+                                <p class="dark:text-[#b7b7b7]">I got prize for qrcode based attendance management
+                                    systeme.</p>
                             </div>
 
                             <div
                                 class="py-4 dark:bg-transparent bg-[#fcf4ff] pl-5 pr-3 space-y-2 rounded-lg dark:border-[#212425] dark:border-2">
-                                <span class="text-tiny text-gray-lite dark:text-[#b7b7b7]">2015-2017</span>
-                                <h3 class="text-xl dark:text-white">Best Freelancer</h3>
-                                <p class="dark:text-[#b7b7b7]"> Fiver &amp; Upwork Level 2 &amp; Top Rated
-                                </p>
+                                {{-- <span class="text-tiny text-gray-lite dark:text-[#b7b7b7]">2022</span> --}}
+                                {{-- <h3 class="text-xl dark:text-white">Best Freelancer</h3> --}}
+                                {{-- <p class="dark:text-[#b7b7b7]"> Fiver &amp; Upwork Level 2 &amp; Top Rated
+                                </p> --}}
                             </div>
                         </div>
                     </div>
@@ -497,15 +483,15 @@
             <div class="container bg-[#f8fbfb] dark:bg-[#0D0D0D] py-12 px-4 sm:px-5 md:px-10 lg:px-20">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <div class="col-span-1">
-                        <h4 class="text-5xl dark:text-white font-medium mb-6"> Working Skills </h4>
+                        <h4 class="text-5xl dark:text-white font-medium mb-6"> Technical Skills </h4>
                         <div class="mb-5">
                             <div class="flex justify-between mb-1">
                                 <span class=" font-semibold text-[#526377] dark:text-[#A6A6A6]">Web
                                     Design</span>
-                                <span class=" font-semibold text-[#526377] dark:text-[#A6A6A6">65%</span>
+                                <span class=" font-semibold text-[#526377] dark:text-[#A6A6A6">85%</span>
                             </div>
                             <div class="w-full bg-[#edf2f2] rounded-full h-1 dark:bg-[#1c1c1c]">
-                                <div class="bg-[#FF6464] h-1 rounded-full" style="width: 65%"></div>
+                                <div class="bg-[#FF6464] h-1 rounded-full" style="width: 85%"></div>
                             </div>
                         </div>
 
@@ -513,16 +499,16 @@
                             <div class="flex justify-between mb-1">
                                 <span class=" font-semibold text-[#526377] dark:text-[#A6A6A6]">Mobile
                                     App</span>
-                                <span class=" font-semibold text-[#526377] dark:text-[#A6A6A6">85%</span>
+                                <span class=" font-semibold text-[#526377] dark:text-[#A6A6A6">65%</span>
                             </div>
                             <div class="w-full bg-[#edf2f2] rounded-full h-1 dark:bg-[#1c1c1c]">
-                                <div class="bg-[#9272d4] h-1 rounded-full" style="width: 85%"></div>
+                                <div class="bg-[#9272d4] h-1 rounded-full" style="width: 65%"></div>
                             </div>
                         </div>
 
                         <div class="mb-5">
                             <div class="flex justify-between mb-1">
-                                <span class=" font-semibold text-[#526377] dark:text-[#A6A6A6]">Illustrator</span>
+                                <span class=" font-semibold text-[#526377] dark:text-[#A6A6A6]">FIGMA</span>
                                 <span class=" font-semibold text-[#526377] dark:text-[#A6A6A6">75%</span>
                             </div>
                             <div class="w-full bg-[#edf2f2] rounded-full h-1 dark:bg-[#1c1c1c]">
@@ -545,17 +531,29 @@
                     <div class="col-span-1">
                         <h4 class="text-5xl dark:text-white font-medium mb-8"> Knowledges </h4>
                         <div class="flex gap-x-3 gap-y-3 md:gap-y-6 md:gap-x-4 flex-wrap">
-                            <button class="resume-btn">Digital Design</button>
-                            <button class="resume-btn">Marketing</button>
-                            <button class="resume-btn">Social Media</button>
-                            <button class="resume-btn">Print</button>
-                            <button class="resume-btn">Time Management</button>
-                            <button class="resume-btn">Flexibility</button>
-                            <button class="resume-btn">Print</button>
-                            <button class="resume-btn">Print</button>
-                            <button class="resume-btn">Time Management</button>
-                            <button class="resume-btn">Flexibility</button>
-                            <button class="resume-btn">Print</button>
+                            <button class="resume-btn">HTML</button>
+                            <button class="resume-btn">CSS</button>
+                            <button class="resume-btn">JAVASCRIPT</button>
+                            <button class="resume-btn">TYPESCRIPT</button>
+                            <button class="resume-btn">C</button>
+                            <button class="resume-btn">C++</button>
+                            <button class="resume-btn">JAVA</button>
+                            <button class="resume-btn">PYTHON</button>
+                            <button class="resume-btn">R</button>
+                            <button class="resume-btn">PHP</button>
+                            <button class="resume-btn">VISUAL BASIC</button>
+                            <button class="resume-btn">LARAVEL</button>
+                            <button class="resume-btn">CODE IGNITOR</button>
+                            <button class="resume-btn">REACT</button>
+                            <button class="resume-btn">NEXTJS</button>
+                            <button class="resume-btn">NODEJS</button>
+                            <button class="resume-btn">REACT NATIVE CLI</button>
+                            <button class="resume-btn">EXPRESS JS</button>
+                            <button class="resume-btn">BOOTSTRAP</button>
+                            <button class="resume-btn">TAILWIND</button>
+                            <button class="resume-btn">ALPINE JS</button>
+                            <button class="resume-btn">LIVEWIRE</button>
+                            <button class="resume-btn">JQUERY</button>
                         </div>
                     </div>
                     <!-- end button group -->
@@ -575,7 +573,7 @@
     <div class="bg-white lg:rounded-2xl dark:bg-[#111111]">
         <div data-aos="fade" class="aos-init aos-animate">
             <div class="container px-4 sm:px-5 md:px-10 lg:px-20">
-                <div class="py-12">
+                <div id="contact_section" class="py-12">
                     <h2 class="after-effect after:left-40 mb-[40px] mt-12 lg:mt-0">Contact</h2>
                     <div class="lg:flex gap-x-20">
                         <!-- personal contact information -->
@@ -583,26 +581,24 @@
                             <div
                                 class="flex flex-wrap bg-[#fcf4ff] dark:bg-transparent p-[30px] dark:border-[#212425] dark:border-2 gap-2 rounded-xl">
                                 <span class="w-8 mt-2">
-                                    <img src="./images/contact/phone-call.png" alt="icon"
-                                        class="text-4xl dark:text-white" />
+                                    <img src="/images/img/phone-call.png" alt="icon" class="text-4xl dark:text-white" />
                                 </span>
                                 <div class="space-y-2">
                                     <p class="text-xl font-semibold dark:text-white"> Phone : </p>
-                                    <p class="text-gray-lite text-lg dark:text-[#A6A6A6]"> +452 666 386 </p>
-                                    <p class="text-gray-lite text-lg dark:text-[#A6A6A6]"> +452 666 386 </p>
+                                    <p class="text-gray-lite text-lg dark:text-[#A6A6A6]"> +91 7697477107 </p>
+                                    <p class="text-gray-lite text-lg dark:text-[#A6A6A6]"> +91 8770416202 </p>
                                 </div>
                             </div>
-
                             <div
                                 class="flex flex-wrap dark:bg-transparent bg-[#eefbff] p-[30px] dark:border-[#212425] dark:border-2 gap-2 rounded-xl">
                                 <span class="w-8 mt-2">
-                                    <img src="./images/contact/email.png" alt="icon" class="text-4xl dark:text-white" />
+                                    <img src="/images/img/email.png" alt="icon" class="text-4xl dark:text-white" />
                                 </span>
                                 <div class="space-y-2">
                                     <p class="text-xl font-semibold dark:text-white"> Email : </p>
-                                    <p class="text-gray-lite text-lg dark:text-[#A6A6A6]"> support@gmail.com
+                                    <p class="text-gray-lite text-lg dark:text-[#A6A6A6]"> rajfekar.123@gmail.com
                                     </p>
-                                    <p class="text-gray-lite text-lg dark:text-[#A6A6A6]"> example@gmail.com
+                                    <p class="text-gray-lite text-lg dark:text-[#A6A6A6]"> khemrajfekar.123@gmail.com
                                     </p>
                                 </div>
                             </div>
@@ -610,14 +606,14 @@
                             <div
                                 class="flex flex-wrap dark:bg-transparent bg-[#f2f4ff] p-[30px] dark:border-[#212425] dark:border-2 gap-2 rounded-xl">
                                 <span class="w-8 mt-2">
-                                    <img src="./images/contact/map.png" alt="icon" class="text-4xl dark:text-white" />
+                                    <img src="/images/img/map.png" alt="icon" class="text-4xl dark:text-white" />
                                 </span>
                                 <div class="space-y-2">
                                     <p class="text-xl font-semibold dark:text-white"> Address : </p>
-                                    <p class="text-gray-lite text-lg dark:text-[#A6A6A6]"> Maount View, Oval
+                                    <p class="text-gray-lite text-lg dark:text-[#A6A6A6]"> Shree Dudhadhari Math Mandir
                                     </p>
-                                    <p class="text-gray-lite text-lg dark:text-[#A6A6A6]"> Road, New York,
-                                        USA </p>
+                                    <p class="text-gray-lite text-lg dark:text-[#A6A6A6]"> Math Para, Raipur, C.G.
+                                        INDIA </p>
                                 </div>
                             </div>
                         </div>
@@ -633,7 +629,7 @@
                                         partnerships.</span>
                                 </h3>
 
-                                <form id="myForm" action="https://formspree.io/f/xoqrgaab" method="POST">
+                                <form id="myForm" action="https://formspree.io/f/mayzeaaj" method="POST">
                                     <!-- name input -->
                                     <div class="relative z-0 w-full mt-[40px] mb-8 group">
                                         <input type="text" id="name" name="name"
@@ -680,24 +676,16 @@
 
             <!-- footer  start-->
             <footer class="overflow-hidden bg-[#f8fbfb] dark:bg-[#212425] rounded-b-2xl">
-                <p class="text-center py-6 text-gray-lite dark:text-color-910"> © 2022 All Rights Reserved
+                <p class="text-center py-6 text-gray-lite dark:text-color-910"> © All {{date('Y')}} Rights Reserved
                     by <a class="hover:text-[#FA5252] duration-300 transition"
-                        href="https://themeforest.net/user/ib-themes" target="_blank"
-                        rel="noopener noreferrer">ib-themes</a>. </p>
+                        href="https://themeforest.net/user/ib-themes" target="_blank" rel="noopener noreferrer">Khemraj
+                        Fekar</a>. </p>
             </footer>
             <!-- footer ends -->
         </div>
     </div>
 
-
-
-
-
-
-
     <script src="/js/main.js"></script>
     <script src="/js/jquary.min.js"></script>
-
-    @livewireScripts
 
 </html>

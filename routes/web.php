@@ -30,9 +30,9 @@ use App\Http\Controllers\ProfileController;
 |----------------------------------------------------------------------------
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+Route::get('/', function () {
+    return view('raj.index');
+});
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -189,7 +189,7 @@ Route::controller(AdminController::class)->middleware('admin')->group(function (
 });
 //rit home dashboard
 Route::controller(RitController::class)->group(function () {
-    Route::get('/', 'index');
+    // Route::get('/', 'index');
     Route::post('/rit/register', 'register');
     Route::post('/rit/signin', 'signin');
     Route::get('/patelsir', 'patelsir');

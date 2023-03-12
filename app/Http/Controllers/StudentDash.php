@@ -1,5 +1,7 @@
 <?php
+
 namespace App\Http\Controllers;
+
 use App\Models\Attendance;
 use App\Models\Students;
 use App\Models\User;
@@ -37,9 +39,9 @@ class StudentDash extends Controller
   //all student dashboard 
   public function studash()
   {
-   
-      $s = User::where('libid', '=', session()->get('libid'))->first();
-  
+
+    $s = User::where('libid', '=', session()->get('libid'))->first();
+
     return view('studentdash.dash', compact('s'));
   }
 
@@ -70,8 +72,6 @@ class StudentDash extends Controller
   //update date
   public function update_data(Request $request)
   {
-
-   
     $request->validate([
       'collegeid' => 'required|min:1|max:15',
       'libid' => 'required|min:1|max:10',
@@ -88,14 +88,12 @@ class StudentDash extends Controller
       'image' => 'max:500',
 
     ]);
-   $filename = $request->collegeid."helloraj". date('his');
-   if($request->image!=NULL)
-  {
-    $filename = "raj_" . date('his') . $request->libid . "." . $request->file('image')->getClientOriginalExtension();
-    $request->file('image')->storeAs('public/students', $filename);
+    $filename = $request->collegeid . "helloraj" . date('his');
+    if ($request->image != NULL) {
+      $filename = "raj_" . date('his') . $request->libid . "." . $request->file('image')->getClientOriginalExtension();
+      $request->file('image')->storeAs('public/students', $filename);
+    }
 
-  }
-    
     $raj = User::where('collegeid', '=', $request->collegeid)->update([
       'email' => $request->email,
       'gender' => $request->gender,
@@ -144,8 +142,8 @@ class StudentDash extends Controller
   public function issued_books()
   {
     $data = array();
-      $s = User::where('libid', '=', session()->get('libid'))->first();
-   
+    $s = User::where('libid', '=', session()->get('libid'))->first();
+
     $issueb = Ibooks::where('userid', '=', session()->get('libid'))->get();
     return view('studentdash.issued_books', compact('s', 'issueb'));
   }
@@ -156,9 +154,9 @@ class StudentDash extends Controller
   public function book_request()
   {
     $data = array();
-   
-      $s = User::where('libid', '=', session()->get('libid'))->first();
-  
+
+    $s = User::where('libid', '=', session()->get('libid'))->first();
+
 
     $books = Books::all();
     return view('studentdash.book_request', compact('s', 'books'));
@@ -190,7 +188,7 @@ class StudentDash extends Controller
     $request->file('image')->storeAs('public/students', $filename);
 
     $pass = Hash::make($request->password);
-    $u = Students::insert([
+    $u = User::insert([
       'libid' => $request->libid,
       'name' => $request->name,
       'email' => $request->email,
@@ -239,7 +237,7 @@ class StudentDash extends Controller
 
 
   //signin all member
-  
+
   public function signin(Request $request)
   {
 
@@ -278,7 +276,7 @@ class StudentDash extends Controller
       } else {
         return redirect('/rit/login')->with('fail', 'Password Not matches');
       }
-    } 
+    }
 
     //librarian
     elseif ($user->type == 2) {
@@ -291,7 +289,7 @@ class StudentDash extends Controller
       } else {
         return redirect('/rit/login')->with('fail', 'Password Not matches');
       }
-    } 
+    }
     //principal
     elseif ($user->type == 3) {
       if (Hash::check($request->password, $user->password)) {
@@ -302,7 +300,7 @@ class StudentDash extends Controller
       } else {
         return redirect('/rit/login')->with('fail', 'Password Not matches');
       }
-    } 
+    }
     //accountent
     elseif ($user->type == 4) {
       if (Hash::check($request->password, $user->password)) {
@@ -313,7 +311,7 @@ class StudentDash extends Controller
       } else {
         return redirect('/rit/login')->with('fail', 'Password Not matches');
       }
-    } 
+    }
     //HR
     elseif ($user->type == 5) {
       if (Hash::check($request->password, $user->password)) {
@@ -324,7 +322,7 @@ class StudentDash extends Controller
       } else {
         return redirect('/rit/login')->with('fail', 'Password Not matches');
       }
-    } 
+    }
     //T&P
     elseif ($user->type == 6) {
       if (Hash::check($request->password, $user->password)) {
@@ -335,9 +333,7 @@ class StudentDash extends Controller
       } else {
         return redirect('/rit/login')->with('fail', 'Password Not matches');
       }
-    } 
-    
-    elseif($user->type == 7) {
+    } elseif ($user->type == 7) {
 
       if (Hash::check($request->password, $user->password)) {
         $request->session()->put('emp_id', $user->collegeid);
@@ -347,11 +343,8 @@ class StudentDash extends Controller
       } else {
         return redirect('/rit/login')->with('fail', 'Password Not matches');
       }
-    }
-    else{
-      return redirect('/rit/login')->with('fail','you are not member of ritee raipur');
-
-     
+    } else {
+      return redirect('/rit/login')->with('fail', 'you are not member of ritee raipur');
     }
   }
 
@@ -360,9 +353,9 @@ class StudentDash extends Controller
   public function attendance()
   {
 
-  
-      $s = User::where('libid', '=', session()->get('libid'))->first();
-   
+
+    $s = User::where('libid', '=', session()->get('libid'))->first();
+
     $a = Attendance::where('memberid', '=', session()->get('libid'))->get();
     return view('studentdash.attendance', compact('s', 'a'));
   }
@@ -372,12 +365,10 @@ class StudentDash extends Controller
   public function fees_details()
   {
 
-   
-      $s = User::where('libid', '=', session()->get('libid'))->first();
-      $fees = Fees::where('collegeid', '=', session()->get('student_id'))->get();
-      return view('studentdash.fees_details', compact('s', 'fees'));
-   
 
+    $s = User::where('libid', '=', session()->get('libid'))->first();
+    $fees = Fees::where('collegeid', '=', session()->get('student_id'))->get();
+    return view('studentdash.fees_details', compact('s', 'fees'));
   }
 
 
@@ -386,10 +377,10 @@ class StudentDash extends Controller
   public function invoice($id)
   {
 
-   
-      $s = User::where('libid', '=', session()->get('libid'))->first();
-      $fees = Fees::where('id', '=', $id)->first();
-   
+
+    $s = User::where('libid', '=', session()->get('libid'))->first();
+    $fees = Fees::where('id', '=', $id)->first();
+
 
 
     return view('studentdash.invoice', compact('s', 'fees'));
@@ -400,26 +391,23 @@ class StudentDash extends Controller
   {
 
 
-      $s = User::where('libid', '=', session()->get('libid'))->first();
-      $fees = Fees::where('id', '=', $id)->first();
-      return view('studentdash.paynow', compact('s', 'fees'));
-   
-
-
+    $s = User::where('libid', '=', session()->get('libid'))->first();
+    $fees = Fees::where('id', '=', $id)->first();
+    return view('studentdash.paynow', compact('s', 'fees'));
   }
 
-//payment done
+  //payment done
   public function payment_done(Request $request)
   {
-    
+
     $request->validate([
       'upi' => 'required',
       'date' => 'required',
       'time' => 'required'
-      
+
     ]);
 
-   $res = Feepaid::insert([
+    $res = Feepaid::insert([
       'upi_ref_no' => $request->upi,
       'transaction_date' => $request->date,
       'transaction_time' => $request->time,
@@ -427,30 +415,21 @@ class StudentDash extends Controller
 
     ]);
 
-    if($res){
-      return redirect('/rit/studentdashboard/')->with('success','successfully paid your fees update within 24 hour.');
-
+    if ($res) {
+      return redirect('/rit/studentdashboard/')->with('success', 'successfully paid your fees update within 24 hour.');
+    } else {
+      return redirect('/rit/studentdashboard/')->with('fail', 'Fail!! payment faild retry after one hour.');
     }
-    else{
-      return redirect('/rit/studentdashboard/')->with('fail','Fail!! payment faild retry after one hour.');
-
-    }
-
-
-
-
-
-
   }
 
   public function bookrequest($id, $libid)
   {
     $rbook = Books::where('id', '=', $id)->first();
 
-$bs= Rbooks::where('userid','=',$libid)->where('bookid','=',$rbook->bookid)->first();
-if($bs){
-  return redirect('/rit/studentdashboard/book_request')->with('fail','you already requested for this book');
-}
+    $bs = Rbooks::where('userid', '=', $libid)->where('bookid', '=', $rbook->bookid)->first();
+    if ($bs) {
+      return redirect('/rit/studentdashboard/book_request')->with('fail', 'you already requested for this book');
+    }
     $ruser = User::where('libid', '=', $libid)->first();
     $user = new Rbooks;
     $user->userid = $ruser->libid;
