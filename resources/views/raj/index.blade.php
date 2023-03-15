@@ -30,6 +30,7 @@
   /* #hero {
     background: gray;
   } */
+
   </style>
 </head>
 
@@ -41,7 +42,6 @@
     <h2>Full Stack Web Developer</h2>
     <a href="#about" class="btn-get-started scrollto"><i class="bi bi-chevron-double-down"></i></a>
   </section><!-- End Hero -->
-
   <!-- ======= Header ======= -->
   <header id="header" class="d-flex align-items-center">
     <div class="container d-flex align-items-center justify-content-between">
@@ -97,9 +97,10 @@
             <div class="content d-flex flex-column justify-content-center">
               <h3>Full Stack Web Developer</h3>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit
+                i am a dedicated and open minded person. i get across to people and adjust to changes with ease. i am a fast learner.
+                my stongest point is that i can learn from my atmoshphere.
               </p>
-              <div class="row">
+              {{-- <div class="row">
                 <div class="col-md-6 d-md-flex align-items-md-stretch">
                   <div class="count-box">
                     <i class="bi bi-emoji-smile"></i>
@@ -131,7 +132,7 @@
                     <p><strong>Awards</strong> rerum asperiores dolor alias quo reprehenderit eum et nemo pad der</p>
                   </div>
                 </div>
-              </div>
+              </div> --}}
             </div><!-- End .content-->
           </div>
         </div>
@@ -402,12 +403,12 @@
               </ul>
               </p>
             </div>
-            <div class="resume-item">
+            {{-- <div class="resume-item">
               <h4>Android App Development</h4>
               <h5>2022</h5>
               <p><em>SIMPLILEARN</em></p>
             
-            </div>
+            </div> --}}
 
              <div class="resume-item">
               <h4>Microprocessor-8086</h4>
@@ -457,33 +458,27 @@
         <div class="row">
           <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
             <div class="icon-box">
-              <div class="icon"><i class="bx bxl-dribbble"></i></div>
+              <div class="icon"><i class=" bx bx-file"></i></div>
               <h4 class="title"><a href="">Coding</a></h4>
-              <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
+              <p class="description">I love to code whenever i am free. <br> my aim is make the world open and connected.</p>
             </div>
           </div>
 
           <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
             <div class="icon-box">
-              <div class="icon"><i class="bx bx-file"></i></div>
+              <div class="icon"><i class="bx bxl-dribbble"></i></div>
               <h4 class="title"><a href="">Playing Chess</a></h4>
-              <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
+              <p class="description">in various types of games , i like to play chess game.</p>
             </div>
           </div>
 
-          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
-            <div class="icon-box">
-              <div class="icon"><i class="bx bx-tachometer"></i></div>
-              <h4 class="title"><a href="">Swiming</a></h4>
-              <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
-            </div>
-          </div>
+         
 
           <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
             <div class="icon-box">
               <div class="icon"><i class="bx bx-world"></i></div>
               <h4 class="title"><a href="">YouTube</a></h4>
-              <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
+              <p class="description">Watching techanical & knowledgebal videos on youtube.</p>
             </div>
           </div>
 
